@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_1sz4rpa" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="3.3.4">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_1sz4rpa" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="3.2.1">
   <bpmn:process id="Process_1jpabdh" isExecutable="true">
     <bpmn:startEvent id="StartEvent_1">
       <bpmn:outgoing>SequenceFlow_1p3gl4x</bpmn:outgoing>
@@ -7,12 +7,17 @@
     <bpmn:task id="Task_1pbxe58" name="Place pizza order">
       <bpmn:incoming>SequenceFlow_1p3gl4x</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0mpked5</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_14vrzbf</bpmn:outgoing>
     </bpmn:task>
     <bpmn:sequenceFlow id="SequenceFlow_1p3gl4x" sourceRef="StartEvent_1" targetRef="Task_1pbxe58" />
     <bpmn:endEvent id="EndEvent_1oq7siv">
       <bpmn:incoming>SequenceFlow_0mpked5</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="SequenceFlow_0mpked5" sourceRef="Task_1pbxe58" targetRef="EndEvent_1oq7siv" />
+    <bpmn:task id="Task_1y4wxa2" name="New Task">
+      <bpmn:incoming>SequenceFlow_14vrzbf</bpmn:incoming>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="SequenceFlow_14vrzbf" sourceRef="Task_1pbxe58" targetRef="Task_1y4wxa2" />
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_1jpabdh">
@@ -32,6 +37,15 @@
       <bpmndi:BPMNEdge id="SequenceFlow_0mpked5_di" bpmnElement="SequenceFlow_0mpked5">
         <di:waypoint x="370" y="117" />
         <di:waypoint x="432" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Task_1y4wxa2_di" bpmnElement="Task_1y4wxa2">
+        <dc:Bounds x="440" y="190" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_14vrzbf_di" bpmnElement="SequenceFlow_14vrzbf">
+        <di:waypoint x="370" y="117" />
+        <di:waypoint x="410" y="117" />
+        <di:waypoint x="410" y="230" />
+        <di:waypoint x="440" y="230" />
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
