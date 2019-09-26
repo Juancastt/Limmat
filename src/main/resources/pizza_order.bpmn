@@ -13,7 +13,7 @@
       <bpmn:incoming>SequenceFlow_0ukppg6</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="SequenceFlow_0mpked5" sourceRef="Task_1pbxe58" targetRef="Task_1y4wxa2" />
-    <bpmn:task id="Task_1y4wxa2" name="Pay for pizza">
+    <bpmn:task id="Task_1y4wxa2" name="Payment">
       <bpmn:incoming>SequenceFlow_0mpked5</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0ukppg6</bpmn:outgoing>
     </bpmn:task>
