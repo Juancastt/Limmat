@@ -4,6 +4,7 @@
 [![Deploy to Heroku](https://img.shields.io/badge/deploy%20to-Heroku-6762a6.svg?longCache=true)](https://heroku.com/deploy)
 
 This is the repository for DigiBP coaching team
+Team: Andreas, Emanuele, Maja, Devid, Charuta
 
 ## Maintainer
 - [Digitalisation of Business Processes](https://github.com/digibp)
